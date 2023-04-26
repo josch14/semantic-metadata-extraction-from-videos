@@ -1,0 +1,9 @@
+*.json
+*.svg
+*.txt
+
+__pycache__/
+neuralcoref/
+GT_bert_classification/
+MT_bert_classification/
+PDVC_bert_classification/
