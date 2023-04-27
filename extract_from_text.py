@@ -1,7 +1,8 @@
 import argparse
 
-from src import nlp_lib, relations_lib
-from src.entities_lib import extract_entities_and_properties
+from src import nlp_lib
+from src.entities_lib import EntitiesLib
+from src.relations_lib import RelationsLib
 from src.wordnet_lib import WordNetDictionary, WordNetLemmatizerWrapped
 
 parser = argparse.ArgumentParser()
@@ -29,14 +30,15 @@ if __name__ == "__main__":
     # create linguistic annotations using the language parser
     doc = nlp_lib.parse(sentences)
 
-
     # 1) extract video- and event-level entities and entity-property pairs
-    video_level_entities, _, entity_property_pairs = extract_entities_and_properties(
+    video_level_entities, _, entity_property_pairs = EntitiesLib.extract_entities_and_properties(
         doc, timestamps, wn_dictionary, wn_lemmatizer
     )
 
     # 2) extract video- and event-level relations
-    video_level_relations, _ = relations_lib.extract_relations(doc, timestamps, wn_dictionary, wn_lemmatizer)
+    video_level_relations, _ = RelationsLib.extract_relations(
+        doc, timestamps, wn_dictionary, wn_lemmatizer
+    )
 
     # print results
     print(f"--------------------------------------------------------------\n"

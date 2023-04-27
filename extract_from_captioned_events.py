@@ -1,4 +1,6 @@
-from src import entities_lib, relations_lib, nlp_lib
+from src import nlp_lib
+from src.entities_lib import EntitiesLib
+from src.relations_lib import RelationsLib
 from src.wordnet_lib import WordNetDictionary, WordNetLemmatizerWrapped
 
 EXAMPLES = []
@@ -43,14 +45,14 @@ if __name__ == "__main__":
         1) Extract video- and event-level entities and entity-property pairs.
         """
         video_level_entities, event_level_entities, entity_property_pairs = \
-            entities_lib.extract_entities_and_properties(doc, timestamps, wn_dictionary, wn_lemmatizer)
+            EntitiesLib.extract_entities_and_properties(doc, timestamps, wn_dictionary, wn_lemmatizer)
 
 
         """
         2) Extract video- and event-level relations.
         """
         video_level_relations, event_level_relations = \
-            relations_lib.extract_relations(doc, timestamps, wn_dictionary, wn_lemmatizer)
+            RelationsLib.extract_relations(doc, timestamps, wn_dictionary, wn_lemmatizer)
     
         print("--------------------------------------------------------------")
         print("Timestamps \& Sentences:")
