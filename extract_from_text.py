@@ -48,7 +48,7 @@ if __name__ == "__main__":
     for timestamp, sentence in zip(timestamps, sentences):
         print(f"{sentence}.")
     
-    print("\nVideo-level Entities:")
+    print("\nEntities:")
     for e in video_level_entities:
         print(e.to_string())
 
@@ -56,7 +56,7 @@ if __name__ == "__main__":
     for ep in entity_property_pairs:
         print(ep.to_string())
 
-    print("\nVideo-level Relations:")
+    print("\nRelations:")
     for r in video_level_relations:
         print(r.to_string())
 
