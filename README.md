@@ -1,7 +1,7 @@
 # Semantic Metadata Extraction from Generated Video Captions
 
-This repository provides the implementation code of our entity, property & relation extraction methods which we 
-introduced in our paper [Semantic Metadata Extraction from Generated Video Captions](https://arxiv.org/abs/2211.02982) (Johannes Scherer, Ansgar Scherp and Deepayan Bhowmik). We proposed a framework (which combines Video Captioning and NLP methods) to 
+This repository provides implementation code of our entity, property & relation extraction methods which we 
+introduced in our paper [Semantic Metadata Extraction from Generated Video Captions](https://arxiv.org/abs/2211.02982) (Johannes Scherer, Ansgar Scherp and Deepayan Bhowmik). We proposed a framework (combining Video Captioning and NLP methods) to 
 extract semantic metadata solely from automatically generated video captions. As metadata, we considered entities, 
 the entities’ properties, relations between entities, and the video category.
 
@@ -15,7 +15,7 @@ the entities’ properties, relations between entities, and the video category.
 
 
 ## Table of Contents
-You may test the extraction methods on custom text and captioned events (see [Usage](#usage)). This repository does **<ins>not</ins>** contain the implementation of our method for video classification using generated captioned video events, the scripts that we used to evaluate our extraction methods, nor the trained models of the Dense Video Captioning methods that we employed (see [References](#references)) and the captioned events they generated.
+Test the extraction methods on custom text and captioned events (see [Usage](#usage)). This repository does **<ins>not</ins>** contain the implementation of our method for video classification using generated captioned video events, the scripts that we used to evaluate our extraction methods, nor the trained models of the Dense Video Captioning methods that we employed (see [References](#references)) and the captioned events they generated.
 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -40,7 +40,7 @@ pip install -e .
 cd ../../
 ```
 
-If an error occurs when installing spaCy with NeuralCoref vom source, the following commands may work instead (see https://github.com/huggingface/neuralcoref/issues/209). Note that spaCy 2.1.0 is much slower.
+When an error occurs when installing spaCy with NeuralCoref from source, the following installation may work instead (see https://github.com/huggingface/neuralcoref/issues/209). Note that spaCy 2.1.0 is much slower.
 ```
 pip install spacy==2.1.0
 pip install neuralcoref
