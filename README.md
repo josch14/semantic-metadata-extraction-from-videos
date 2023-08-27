@@ -1,8 +1,7 @@
 # Semantic Metadata Extraction from Generated Video Captions
 
 This repository provides implementation code of our entity, property & relation extraction methods which we 
-introduced in our paper [Semantic Metadata Extraction from Generated Video Captions](https://arxiv.org/abs/2211.02982) (Johannes Scherer, Ansgar Scherp and Deepayan Bhowmik). We proposed a framework (combining Video Captioning and NLP methods) to 
-extract semantic metadata solely from automatically generated video captions. As metadata, we considered entities, 
+introduced in our paper [Event and Entity Extraction from Generated Video Captions (CD-MAKE 2023)](https://link.springer.com/chapter/10.1007/978-3-031-40837-3_17) (Johannes Scherer, Ansgar Scherp and Deepayan Bhowmik). We proposed a framework (combining Video Captioning and NLP methods) to extract semantic metadata solely from automatically generated video captions. As metadata, we considered entities, 
 the entities’ properties, relations between entities, and the video category.
 
 <p align="center">
